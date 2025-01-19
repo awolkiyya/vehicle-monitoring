@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:mini_project/commens/routes/name.dart';
 import 'package:mini_project/commens/routes/pages.dart';
+import 'package:mini_project/pages/dashboard/index.dart';
 import 'firebase_options.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 void main() async {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
       getPages:RoutePage.pageRoute, // all routePages
       initialRoute: RouteName.Initial, // initial route
-      // initialBinding: , // initial binding for controller
+      initialBinding:VehicleBinding() , // initial binding for controller
       builder: EasyLoading.init(),
     );
   }

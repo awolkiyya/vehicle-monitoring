@@ -12,7 +12,7 @@ class RoutePage{
         return  Dashboard();
       },
       binding: VehicleBinding(),
-      // transition: Transition.zoom,
+      transition: Transition.zoom,
     ),
   ];
     
