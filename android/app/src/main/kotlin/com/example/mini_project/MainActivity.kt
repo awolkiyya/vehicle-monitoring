@@ -1,4 +1,4 @@
-package com.example.mini_project
+package com.dream.vehicle
 
 import io.flutter.embedding.android.FlutterActivity
 

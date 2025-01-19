@@ -1,0 +1,34 @@
+import 'package:get/get.dart';
+
+class OBDController extends GetxController {
+  // Selected option (Bluetooth or WiFi)
+  var selectedIntegration = "Bluetooth".obs;
+
+  // Dummy data for the vehicle
+  final RxMap<String, dynamic> dummyData = {
+    "fuelLevel": 50, // in percentage
+    "batteryLevel": 75, // in percentage
+    "engineStatus": "Good",
+  }.obs;
+
+  // Fetch data based on selected integration
+  Future<void> fetchOBDData() async {
+    if (selectedIntegration.value == "Bluetooth") {
+      // Simulate fetching via Bluetooth
+      dummyData["fuelLevel"] = 60;
+      dummyData["batteryLevel"] = 80;
+      dummyData["engineStatus"] = "Excellent";
+    } else if (selectedIntegration.value == "WiFi") {
+      // Simulate fetching via WiFi
+      dummyData["fuelLevel"] = 45;
+      dummyData["batteryLevel"] = 65;
+      dummyData["engineStatus"] = "Good";
+    }
+    update(); // Notify UI to update
+  }
+
+  // Change integration type
+  void changeIntegration(String type) {
+    selectedIntegration.value = type;
+  }
+}
