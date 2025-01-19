@@ -37,4 +37,4 @@ Follow these steps to get the app running on your local machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your_username/flutter_app_example.git
+   git clone https://github.com/awolkiyya/vehicle-monitoring.git
